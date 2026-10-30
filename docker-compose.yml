@@ -1,0 +1,11 @@
+services:
+  wonderverse-live:
+    build: .
+    container_name: wonderverse-live-studio
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      # Replace this with a long unique password before starting.
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD}"
